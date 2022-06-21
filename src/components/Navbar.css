@@ -1,0 +1,40 @@
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+    .iconoMenu {
+        font-size: 40px;
+        color: #040404;
+        }
+
+    ul {
+    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+    overflow: auto;
+    }
+
+    li {
+    width: 100px;
+    text-align: center;
+    float: right;
+    }
+
+    .nav-link {
+    text-decoration: none;
+    display: block;
+    color: #000;
+    }
+
+    .nav-link:hover {
+        border-radius: 5px;
+    background: #3c8e8bee;
+    color: #000;
+    }
