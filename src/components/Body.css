@@ -1,0 +1,7 @@
+.videoInicio {
+    position: relative;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    }
