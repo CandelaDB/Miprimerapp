@@ -1,21 +1,20 @@
 import './Body.css';
-import Card from './Card'
+import {Card, Navbar} from 'react-bootstrap';
 
-
-function Body() {
+function  ItemListContainer(Body) {
     return (
-        <section className='cuerpo'>
-            
-    <main className='container videoInicio'>
-    <div height='75vh' min-height='25rem' width='100%'>
-    <video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>
-    <source src='../assets/pexels-cottonbro-10609736.mp4' type='video/mp4' />
-    </video>
-    </div>
-    </main>
-    <section/>
-    <Card />
+    <>
+            <section className='cuerpo'>        
+                <main className='container videoInicio'>
+                <div height='75vh' min-height='25rem' width='100%'>
+                    <video playsinline='playsinline' autoplay='autoplay' muted='muted' loop='loop'>
+                        <source src='../assets/pexels-cottonbro-10609736.mp4' type='video/mp4' />
+                    </video>
+                </div>
+                </main>
+            <section/>
+        </>
     );
-    }
+}
 
-export default Body;
+export default ItemListContainer;
