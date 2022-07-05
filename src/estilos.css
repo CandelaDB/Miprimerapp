@@ -1,4 +1,11 @@
-* {
+.videoInicio {
+  position: relative;
+  height: 75vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+  }
+  * {
     font-family: "Noto Sans KR", sans-serif;
     list-style: none;
     text-decoration: none;

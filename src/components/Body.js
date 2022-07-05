@@ -1,4 +1,4 @@
-import './Body.css';
+/*import '../estilos.css';
 import {Card, Navbar} from 'react-bootstrap';
 
 function  ItemListContainer(Body) {
@@ -12,9 +12,9 @@ function  ItemListContainer(Body) {
                     </video>
                 </div>
                 </main>
-            <section/>
+            </section>
         </>
     );
 }
 
-export default ItemListContainer;
+export default ItemListContainer;*/
