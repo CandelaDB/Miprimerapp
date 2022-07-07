@@ -4,7 +4,7 @@ import { Item } from './Item';
 export const ItemList = ({ items }) => {
     return (
         <section className='flex-row'>
-            {items?.map((item) => (
+            {items.map((item) => (
                 <Item {...item} key={item.id} />
             ))}
         </section>

@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react";
 import { ItemList } from './ItemList';
 import { data } from '../data/data';
 import { useParams } from "react-router-dom";
+//Itemas que traen la data de mi array de data
 
 export const ItemListContainer = ({ greeting }) => {
     const [items, setItems] = useState([]);

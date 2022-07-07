@@ -14,8 +14,8 @@ export default  function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element= {<ItemListContainer greeting={'HOME'} />}/>
-        <Route path="/category/:idcategoria" element= {<ItemListContainer greeting={'FILTRADO'} />}/>
+        <Route path="/" element= {<ItemListContainer greeting={'PRODUCTOS'} />}/>
+        <Route path="/category/:idcategoria" element= {<ItemListContainer greeting={'SELECCIONADOS'} />}/>
         <Route path="/item:iditem" element={<ItemDetailContainer />} />
       </Routes>
       </BrowserRouter>
