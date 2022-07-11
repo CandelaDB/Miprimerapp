@@ -12,7 +12,7 @@ export const ItemDetail = ({
 }) => {
     return (
         <div className='detail-row'>
-            <img src={toBeRequired(`../assets/${imagen}`)} alt={`${id}-${nombre}`} className='flex-col'/>
+            <img src={toBeRequired(`${imagen}`)} alt={`${id}-${nombre}`} className='flex-col'/>
             <section className='flex-col'>
                 <h1>{nombre}</h1>
                 <p>{descripcion}</p>
