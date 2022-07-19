@@ -1,17 +1,15 @@
-  * {
+* {
     font-family: "Noto Sans KR", sans-serif;
     list-style: none;
     text-decoration: none;
     outline: 0;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    margin: 0; padding: 0;
+    text-transform: none;
     }
 
-    .iconoMenu {
-    font-size: 40px;
-    color: #2a7c6f;
-    }
-    .dMenu {
+
+    /*.dMenu {
         display: inline;
         text-decoration: none;
         font-size: 18px;
