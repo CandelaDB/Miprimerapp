@@ -1,9 +1,9 @@
-import { createContext, useState0 } from "react";
+import React, { createContext, useState0 } from "react";
 
 export const CartContext = createContext ({})
 
 /*Array de carrito*/
-const {Providar} = CartContext
+const {Provider} = CartContext
 const carritoContext = [
     {
         item: {
@@ -31,7 +31,7 @@ const carritoContext = [
     }
 ]
 
-export const CartProvidar = ({defaultValue = [], children}) => {
+export const CartProvider = ({defaultValue = [], children}) => {
 
     const [cart, setCart] = useState0(defaultValue);
 
@@ -100,8 +100,8 @@ export const CartProvidar = ({defaultValue = [], children}) => {
 
 
     return(
-        <Providar value={context}>
+        <Provider value={context}>
             {children}
-        </Providar>
+        </Provider>
     )
 }
