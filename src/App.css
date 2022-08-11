@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+    font-family: "Noto Sans KR", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    outline: 0;
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    text-transform: none;
+    }
+
+
+    /*.dMenu {
+        display: inline;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        text-transform: uppercase;
+        color: #0b0b0b;
+        }
+    .menu{
+        list-style-type: none;
+        margin: 5px;
+        padding: 5px;
+        overflow: hidden;
+    }
+    .menuS{
+        float: left
+    }    
+    .menuS .aA {
+        display: block;
+    color: #0b0b0b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+    /*.dMenu.active, .dMenu:hover {
+        background: #2a7c6f;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        border-radius: 5px;
+        }
+    .fondoInicio {
+        background-color: #aa9494b8;
+    }*/
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        gap: 10px;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        justify-content: space-around;
+        }
+        .detail-row {
+            display: flex;
+            flex-direction: row;
+            margin: 16px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-self: flex-start;
+            justify-self: flex-start;
+        }
+
+        .item_card {
+            background: #2a7c6f;
+            display: flex;
+            flex-direction: column;
+            flex: 0 40%;
+            padding: 15px;
+            border-radius: 10px;
+            color: rgb(6, 6, 6);
+            font-weight: 600;
+            text-align: center;
+            box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+            -webkit-box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+            -moz-box-shadow: 7px 6px 12px -1px rgba(72, 72, 72, 0.77);
+            }
+        .small-img {
+                height: 90px;
+            }
+            .imgGaleria {
+                width: 100%;
+                height: 700px;
+                border-radius: 15px;
+                transition: 0.3s;
+                transform: all ease;
+            }
+            
+            .imgGaleria:hover {
+                transform: scale(0.9);
+            }
+            
+            .App {
+                width: 90%;
+                margin: auto;
+                background-image: url("../src/imagenes/marble-4700915_1920.jpg");
+                background-size: cover;
+            }
+            
+            .App-logo {
+                height: 40vmin;
+                pointer-events: none;
+            }
+            
+            @media (prefers-reduced-motion: no-preference) {
+                .App-logo {
+                animation: App-logo-spin infinite 20s linear;
+                }
+            }
+            
+            .App-header {
+                background-color: #282c34;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                font-size: calc(10px + 2vmin);
+                color: white;
+            }
+            
+            .App-link {
+                color: #61dafb;
+            }
+            
+            @keyframes App-logo-spin {
+                from {
+                transform: rotate(0deg);
+                }
+                to {
+                transform: rotate(360deg);
+                }
+            }

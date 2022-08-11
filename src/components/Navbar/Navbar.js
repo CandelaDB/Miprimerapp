@@ -1,39 +1,72 @@
-import React from 'react';
-import '../Navbar/navbar.css';
-import {Link } from 'react-router-dom';
-import { DEFAULT_BREAKPOINTS } from 'react-bootstrap/esm/ThemeProvider';
+import { useEffect, useState } from "react";
+import { MenuItems } from "./MenuItems";
+import { Burger } from "./Burger";
+import { LAura, SiAura } from "react-icons/si";
+import { Profile } from "./Perfil/Perfil";
+import { Link } from "react-router-dom";
+import NavbarContainer from "./Styled/NavbarContainer";
+import { MenuStyled } from "./Styled/MenuStyled";
+import { Menu } from "./MenuItems";
+import styled from "styled-components";
 
+const Logo = styled.div`
+    font-size: 48px;
+    cursor: pointer;
+    transform: translateX(35px);
+    .logoLink {
+    text-decoration: none;
+    color: #bf3f43;
+    }
+    &:hover {
+    opacity: 0.5;
+    }
+`;
 
 export const Navbar = () => {
+    const [openNav, setOpenNav] = useState(false);
+    const [fix, setFix] = useState(false);
 
-    const categorias = [
-        {id: 'jahsgbd', address:'/category/Shampoo', text: 'Shampoo' },
-        {id: 'jahsfrdsgbd', address:'/category/Acondicionador', text: 'Acondicionador' },
-        {id: 'rtgjahsgbd', address:'/category/Aceites', text: 'Aceites' },
-        {id: 'sgbd', address:'/category/Kit', text: 'Kit' },
-    ];
+    const setFixed = () => {
+    let scrollTop = window.scrollY;
+    scrollTop > 50 ? setFix(true) : setFix(false);
+    };
 
-return (
-    <section className='navBar'>
-        <div className='logo'><a href='#'>AURA</a></div>
-        <div className='barraMenu'>
-            <ul className=''>
-                <li className=''><a href='#'>PRODUCTOS</a>
-                <ul>
-                {categorias.map((cat) => {
-                    return (
-                    <li><Link className= 'nav-link aA' aria-current='page' to={cat.address} key={cat.id}>{cat.text}
-                    </Link></li>
-                            );
-                        })}
-                    </ul></li>
-                <li className=''><a href='#'>SERVICIOS</a></li>
-                <li className=''><a href='#'>GALERIA</a></li>
-                <li className=''><a href='#'>CONSULTAS</a></li>
-                </ul>
-                </div>
-    </section>
-);
+    useEffect(() => {
+    window.addEventListener("scroll", setFixed);
+    return () => window.removeEventListener("scroll", setFixed);
+    }, []);
+
+    const handleClick = () => {
+    setOpenNav(!openNav);
+
+    const body = document.body;
+    openNav
+        ? (body.style.overflowY = "visible")
+        : (body.style.overflowY = "hidden");
+    };
+
+    return (
+    <NavbarContainer fix={fix}>
+        <Burger openNav={openNav} handleClick={handleClick} />
+        <Logo>
+        <Link to="/home" className="logoLink">
+            <LAura />
+        </Link>
+        </Logo>
+        <SiAura className="logoAura" />
+        <MenuStyled openNav={openNav}>
+        {MenuItems.map((item) => {
+            return (
+            <Menu
+                key={item.id}
+                item={item}
+                openNav={openNav}
+                handleClick={handleClick}
+            />
+            );
+        })}
+        </MenuStyled>
+        <Profile />
+    </NavbarContainer>
+    );
 };
-
-export default Navbar;
