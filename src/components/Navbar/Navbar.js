@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MenuItems } from "./MenuItems";
 import { Burger } from "./Burger";
-import { LAura, SiAura } from "react-icons/si";
+import { SiPalantir } from "react-icons/si";
 import { Profile } from "./Perfil/Perfil";
 import { Link } from "react-router-dom";
 import NavbarContainer from "./Styled/NavbarContainer";
@@ -50,10 +50,10 @@ export const Navbar = () => {
         <Burger openNav={openNav} handleClick={handleClick} />
         <Logo>
         <Link to="/home" className="logoLink">
-            <LAura />
+            <SiPalantir />
         </Link>
         </Logo>
-        <SiAura className="logoAura" />
+        <SiPalantir className="logoAura" />
         <MenuStyled openNav={openNav}>
         {MenuItems.map((item) => {
             return (
