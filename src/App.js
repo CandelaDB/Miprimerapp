@@ -1,46 +1,40 @@
-import "./App.css";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Navbar } from "./components/NavBar/Navbar";
-import { Home } from "./components/Pages/Home/Home";
-import { Productos } from "./components/Pages/Productos/Productos";
-import { Store } from "./components/Pages/Store/Store";
-import { Contact } from "./components/Pages/Contact/Contact";
-import { ItemDetail } from "./components/Pages/Store/Details/ItemDetail/ItemDetail";
-import { ShoppingList } from "./components/NavBar/Profile/ShoppingCart/ShoppingList/ShoppingList";
-import { CartProvider } from "./contexts/CartContext";
-import { User } from "./components/Pages/User/User";
+import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { CartProvider } from './context/CartContext';
+import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
+import { NotificationProvider } from './notifications/Notifications'
 
-export const App = () => {
+
+
+function App() {
+
+
   return (
-    <CartProvider>
-      <BrowserRouter>
-        <Navbar />
-        <div className="App">
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={<Navigate replace to="/Home" />}
-            ></Route>
-            <Route exact path="/Home" element={<Home />}></Route>
-            <Route exact path="/Productos" element={<Productos />}></Route>
-            <Route exact path="/store" element={<Store />}></Route>
-            <Route exact path="/contact" element={<Contact />}></Route>
-            <Route
-              exact
-              path="/itemDetail/:dateId"
-              element={<ItemDetail />}
-            ></Route>
-            <Route exact path="/login" element={<User />}></Route>
-            <Route
-              exact
-              path="/shoppingList"
-              element={<ShoppingList />}
-            ></Route>
-            <Route exact path="*" ></Route>
-          </Routes>
-        </div>
-      </BrowserRouter>
-    </CartProvider>
+    <div className="App">
+      <NotificationProvider>
+        <CartProvider>
+          <BrowserRouter>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<ItemListContainer title={"Sunflower."} greeting={"¡Bienvenidos! ¡Nos encanta que veas nuestros productos!"} />} />
+              <Route path="/category/:categoryId" element={<ItemListContainer title={"Sunflower."} greeting={"¡Bienvenidos! ¡Nos encanta que veas nuestros productos!"} />} />
+              <Route path="/detail/:productId" element={<ItemDetailContainer />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+            </Routes>
+          </BrowserRouter>
+        </CartProvider>
+      </NotificationProvider>
+    </div>
+
+
   );
-};
+}
+
+
+export default App;

@@ -1,0 +1,88 @@
+.cards{
+    padding: 15px;
+    color: #C3A492;
+    display: inline-block;   
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: lighter; 
+}
+
+
+.allButtons{
+    border-color:#F8DFD1 ;
+    border-radius: 10px;
+    padding: 7px;
+    color: #C3A492;
+}
+
+.allButtons:hover {
+    background-color:#C3A492 ;
+    color: white;
+    font-weight: bolder;
+}
+
+.imgDetail {
+    width: 300px;
+    height: 300px;
+    
+}
+
+.itemDetailTitle{
+    font-size: 50px;
+    text-align: center;
+    background-color: white;
+    -webkit-text-stroke: 1px #C3A492;
+    color: transparent;
+    padding: 20px;
+    margin: 15px;
+}
+
+.productDetail{
+    font-size: 30px;
+    text-align: center;
+    color: #C3A492 ;
+    padding: 20px;
+    margin: 15px;
+}
+
+.itemDetailCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.itemDescription{
+    font-size: 20px;
+    text-align: center;
+    color: #C3A492 ;
+    margin: 0 25% 5% 25%;   
+    font-style: italic;
+}
+
+.itemPrice{
+    font-size: 25px;
+    text-align: center;
+    color: #C3A492 ;
+    font-weight: bold;
+}
+
+.itemCategory{
+    font-size: 20px;
+    text-align: center;
+    color: #C3A492 ;
+    font-weight: lighter;
+    text-decoration: dotted;
+    text-decoration-line: underline;
+}
+
+.finishShopping{
+    font-size: 30px;
+    text-align: center;
+    color: #C3A492;
+    padding: 20px;
+    margin: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
