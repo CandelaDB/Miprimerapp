@@ -1,5 +1,5 @@
 import './Notifications.css'
-import React, { useContext, useEffect, useState, createContext } from 'react';
+import React, { useContext, useState, createContext } from 'react';
 
 const Notification = ({ message, severity, anotherClass }) => {
 

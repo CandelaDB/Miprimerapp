@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import CounterButton from "../Counter/Counter"
 import CartContext from "../../context/CartContext"
 import { Link } from "react-router-dom"

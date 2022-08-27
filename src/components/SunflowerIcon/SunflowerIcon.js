@@ -1,6 +1,6 @@
 import { BsFlower1 } from "react-icons/bs";
 import {Link} from 'react-router-dom';
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 
 
 const SunflowerIcon = () => {

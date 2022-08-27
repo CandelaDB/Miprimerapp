@@ -1,5 +1,5 @@
 import Item from "../Item/Item"
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 
 
 const ItemList = ({allProducts}) => {

@@ -3,7 +3,7 @@ import { addDoc, collection, writeBatch, getDocs, query, where, documentId } fro
 import { ddbb } from '../../services/firebase/index';
 import { useNotification } from "../../notifications/Notifications";
 import './Checkout.css';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 
 

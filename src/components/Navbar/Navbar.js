@@ -2,7 +2,7 @@ import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
 import SunflowerIcon from '../SunflowerIcon/SunflowerIcon';
 import {NavLink } from 'react-router-dom';
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 
 
 const NavBar = () => { 
